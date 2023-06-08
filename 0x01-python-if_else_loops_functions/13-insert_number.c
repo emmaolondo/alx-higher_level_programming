@@ -19,7 +19,7 @@ listint_t *insert_node(listint_t **head, int number)
 	/* checck if the number at the head if greater than the new number
 	 * if true let the new_ptr be the head pointer of the list
 	 */
-	if (ptr = NULL || ptr->n > number)
+	if (ptr == NULL || ptr->n > number)
 	{
 		new_ptr->next = ptr;
 		*head = new_ptr;
