@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/python3
 # function that prints all integers in a list in a reversed order
 
 def print_reversed_list_integer(my_list=[]):
