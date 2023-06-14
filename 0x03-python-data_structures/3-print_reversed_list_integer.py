@@ -2,7 +2,7 @@
 # function that prints all integers in a list in a reversed order
 
 def print_reversed_list_integer(my_list=[]):
-    if my_list == None:
+    if my_list is None:
         pass
     else:
         plen = len(my_list)
