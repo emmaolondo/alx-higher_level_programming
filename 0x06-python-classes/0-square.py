@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-""" Defining aclass in python """
+""" Defining a class in python """
+
+
 class Square:
     """
     An empty class to define a square with no modules
