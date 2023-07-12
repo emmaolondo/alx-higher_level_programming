@@ -59,3 +59,7 @@ class Rectangle:
     def __str__(self):
         """using str to print rectangle """
         return f"{self.r_print()}"
+
+    def __repr__(self):
+        """ using the inbuilt __rep__ """
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
