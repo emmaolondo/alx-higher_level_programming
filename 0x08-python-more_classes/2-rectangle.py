@@ -8,11 +8,13 @@ class Rectangle:
         """ instatiation with an optional width and height """
         self.__height = height
         self.__width = width
-    
+
     def area(self):
         """ Return the area """
         return self.__width * self.__height
+
     def perimeter(self):
+        """ perimeter """
         if self.__width == 0 or self.__height == 0:
             return 0
         per = (2 * self.__width) + (2 * self.__height)
@@ -22,6 +24,7 @@ class Rectangle:
     def width(self):
         """ retriving the width """
         return self.__width
+
     @width.setter
     def width(self, value):
         """ setting the width using seter """
