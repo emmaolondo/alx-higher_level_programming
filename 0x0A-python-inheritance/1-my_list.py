@@ -2,7 +2,7 @@
 """ class that inherits from inbuilt class List """
 
 
-class MyList:
+class MyList(list):
     """ class that inherists from list """
 
     def __init__(self):

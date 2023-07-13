@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" defining the BaseGeomety class """
+
+
 class BaseGeometry:
     """ a class with a public instance method """
     def area(self):
