@@ -1,6 +1,7 @@
 #!/usr/bin/python3
+""" Defining the Rectangle class using getters and setters"""
 
-# Defining the Rectangle class using getters and setters
+
 class Rectangle:
     """ Initializing the instance attributes width and height """
     def __init__(self, width=0, height=0):
