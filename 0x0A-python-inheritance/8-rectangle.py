@@ -4,7 +4,8 @@ BaseGeometry = __import__('base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
-    """" Dexcribing the child class i.e Rectangle using its properties """
+    """" Decribing the child class i.e Rectangle using its properties """
+
     def __init__(self, width, height):
         """ Instatiating the width and height of a rectangle
         Args:
