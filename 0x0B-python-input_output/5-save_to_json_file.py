@@ -1,4 +1,4 @@
-#!/usr/bin/pyrhon3
+#!/usr/bin/python3
 """ Write an object to a text file using a JON representation"""
 import json
 
