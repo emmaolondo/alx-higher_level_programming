@@ -3,3 +3,25 @@
 >>> say_my_name()
 Traceback (most recent call last):
 TypeError: say_my_name() missing 1 required positional argument: 'firsr_name'
+
+>>> say_my_name("A", "B", "C")
+Traceback (most recent call last):
+TypeError: say_my_name() takes from 1 to 2 arguments but 3 were given
+
+>>> say_my_name(90)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name(90, "Hannah")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name("Hannah", 90)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> say_my_name("Becky", "Hannah")
+My name is Becky Hannah
+
+>>> say_my_name("Becky")
+My name is Becky
