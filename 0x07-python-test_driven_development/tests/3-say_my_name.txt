@@ -1,0 +1,5 @@
+>>> say_my_name = __import('3-say_my_name').say_my_name
+
+>>> say_my_name()
+Traceback (most recent call last):
+TypeError: say_my_name() missing 1 required positional argument: 'firsr_name'
