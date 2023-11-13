@@ -3,9 +3,9 @@ const { argv } = require('node:process');
 
 // print first argument in the console
 const firstArgv = argv[2];
-const noArgv = argv[1];
-if (firstArgv) {
+
+if (firstArgv === undefined) {
+  console.log('No argument');
+} else {
   console.log(firstArgv);
-} else if (noArgv) {
-  console.log('no Argument');
 }

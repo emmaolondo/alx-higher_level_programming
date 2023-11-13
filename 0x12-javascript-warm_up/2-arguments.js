@@ -3,10 +3,10 @@ const { argv } = require('node:process');
 
 const numberArgv = argv.length - 2;
 
-if (numberArgv === 1) {
-  console.log('Argument found');
-} else if (numberArgv > 1) {
-  console.log('Arguments found');
-} else {
+if (numberArgv === 0) {
   console.log('No argument');
+} else if (numberArgv === 1) {
+  console.log('Argument found');
+} else {
+  console.log('Arguments found');
 }
