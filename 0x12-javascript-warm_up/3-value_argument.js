@@ -1,4 +1,5 @@
 #!/usr/bin/node
+
 const { argv } = require('node:process');
 
 // print first argument in the console
