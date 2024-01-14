@@ -1,19 +1,18 @@
 #!/usr/bin/node
 
-function add(a, b) {
+function factorial(a) {
 	const process = require('process');
 	const args = process.argv;
 	const arg2 = args[2];
-	const arg3 = args[3];
 	a = parseInt(arg2);
-	b = parseInt(arg3);
 	
-	if (isNaN(a) || isNaN(b)) {
-		return ("NaN");
+	if (isNaN(a) || a <= 1) {
+		return (1);
 	} else {
-		return a + b;
+		return a * factorial(a - 1);
 	}
 }
 
 // Display the results
-console.log(add());
+const input = parseInt(args[2])
+console.log(factorial(input));
