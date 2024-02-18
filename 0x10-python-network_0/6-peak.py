@@ -8,7 +8,7 @@ def find_peak(list_of_integers):
     if a == []:
         return None
 
-    for i in range(1, len(a) - 1):
+    for i in range(len(a) - 1):
         if a[i] >= a[i + 1] and a[i] >= a[i - 1]:
             return a[i]
 
