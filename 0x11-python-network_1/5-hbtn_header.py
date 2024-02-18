@@ -5,7 +5,8 @@
          response header
 You must use the packages requests and sys
 """
-import requests, sys
+import requests
+import sys
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
