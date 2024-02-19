@@ -19,4 +19,4 @@ if __name__ == "__main__":
     if req.status_code == 200:
         print(req.json().get('id'))
     else:
-        print("None status code: {}".format(req.status_code))
+        print("None")
