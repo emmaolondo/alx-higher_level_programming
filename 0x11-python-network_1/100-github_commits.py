@@ -12,7 +12,7 @@ if __name__ == "__main__":
     if len(sys.argv) != 3:
         sys.exit(1)
     repo = sys.argv[1]  # repository
-    owner = sys.argv[1]
+    owner = sys.argv[2]
 
     url = f"https://api.github.com/repos/{owner}/{repo}/commits"
     req = requests.get(url)
@@ -22,5 +22,5 @@ if __name__ == "__main__":
             sha = info['sha']
             author = info['commit']['author']['name']
             print(f"{sha}: {author}")
-        else:
-            print("None")
+    else:
+        print("None")
