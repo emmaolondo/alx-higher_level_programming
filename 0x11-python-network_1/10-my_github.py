@@ -16,10 +16,7 @@ if __name__ == "__main__":
     password = sys.argv[2]
 
     req = requests.get(url, auth=(username, password))
-    try:
-        if req.status_code == 200:
-            print(req.json().get('id'))
-        else:
-            print("failed to retrieve user ID. status code: {}".format(req.status_code))
-    except:
-        pass
+    if req.status_code == 200:
+        print(req.json().get('id'))
+    else:
+        print("None status code: {}".format(req.status_code))
