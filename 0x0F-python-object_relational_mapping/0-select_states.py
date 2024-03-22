@@ -6,16 +6,16 @@ import sys
 
 if __name__ == "__main__":
     """ Connect to database """
-    if len(sys.argv) < 1:
+    if len(sys.argv) != 4:
         sys.exit(1)
 
-    user = sys.argv[1]
-    passwd = sys.argv[2]
+    u = sys.argv[1]  # user
+    p = sys.argv[2]  # password
     db = sys.argv[3]
     port = 3306
 
     # connect to database
-    con = MySQLdb.connect(host= "localhost", user=user, passwd=passwd, db=db, port=port)
+    con = MySQLdb.connect(host="localhost", user=u, passwd=p, db=db, port=port)
 
     cur = con.cursor()
     cur.execute("SELECT * FROM states")

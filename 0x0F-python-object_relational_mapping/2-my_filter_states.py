@@ -18,11 +18,14 @@ if __name__ == "__main__":
     con = MySQLdb.connect(host="localhost", user=user, passwd=passwd, db=db, port=3306)
 
     cur = con.cursor()
-    cur.execute("SELECT * FROM states WHERE name = %s ORDER BY id ASC", (state_name,))
-    rows = cur.fetchall()
+    cur.execute("SELECT * FROM states WHERE BINARY name = %s", (state_name,))
+    results = cur.fetchall()
 
-    for i in rows:
-        print(i)
+    if results:
+        for i in results:
+            print(i)
+    else:
+        print("No matching results found")
 
     # close database connections
     cur.close()
