@@ -9,9 +9,9 @@ import MySQLdb
 import sys
 
 if __name__ == "__main__":
-    """ connect to database """
+    """ connect to database
     if len(sys.argv) != 5:
-        sys.exit(1)
+        sys.exit(1)"""
 
     u = sys.argv[1]  # user
     p = sys.argv[2]  # password
