@@ -18,10 +18,11 @@ if __name__ == "__main__":
             user=u,
             passwd=p,
             db=db,
-            charset="utf8")
+            charset="utf8"
+            )
     cur = con.cursor()
-    query = f"SELECT * FROM states WHERE name LIKE BINARY '{arg}' ORDER BY id"
-    cur.execute(query)
+    query = "SELECT * FROM states WHERE name LIKE %s ORDER BY id"
+    cur.execute(query, (arg + "%",))
     rows = cur.fetchall()
     for i in rows:
         print(i)
