@@ -10,7 +10,7 @@ if __name__ == "__main__":
     u = sys.argv[1]  # username
     p = sys.argv[2]  # password
     db = sys.argv[3]  # database
-    a = sys.argv[4] # name to be searched
+    arg = sys.argv[4]
 
     con = MySQLdb.connect(
             host="localhost",
@@ -18,13 +18,16 @@ if __name__ == "__main__":
             user=u,
             passwd=p,
             db=db,
-            charset="utf8")
+            charset="utf8"
+            )
     cur = con.cursor()
-    # querry to be executed
-    q = "SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY id".format(a)
-    cur.execute(q)
+    query = "SELECT cities.name FROM cities "\
+    "JOIN states ON states.id = cities.state_id " \
+    "WHERE states.name LIKE %s ORDER BY cities.id "
+    cur.execute(query, (arg + "%",))
     rows = cur.fetchall()
     for i in rows:
         print(i)
+#     print()
     cur.close()
     con.close()
