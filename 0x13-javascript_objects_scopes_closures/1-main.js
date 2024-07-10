@@ -17,7 +17,6 @@ console.log(r3.width);
 console.log(r3.height);
 
 const r = new Rectangle(3, 3);
-console.log(r)
-console.log(r.width)
-console.log(r.height)
-
+console.log(r);
+console.log(r.width);
+console.log(r.height);
