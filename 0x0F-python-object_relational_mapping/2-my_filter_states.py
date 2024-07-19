@@ -10,7 +10,7 @@ if __name__ == "__main__":
     u = sys.argv[1]  # username
     p = sys.argv[2]  # password
     db = sys.argv[3]  # database
-    a = sys.argv[4] # name to be searched
+    a = sys.argv[4]  # name to be searched
 
     con = MySQLdb.connect(
             host="localhost",
@@ -21,7 +21,8 @@ if __name__ == "__main__":
             charset="utf8")
     cur = con.cursor()
     # querry to be executed
-    q = "SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY id".format(a)
+    q = "SELECT * FROM \
+            states WHERE name LIKE BINARY '{}' ORDER BY id".format(a)
     cur.execute(q)
     rows = cur.fetchall()
     for i in rows:

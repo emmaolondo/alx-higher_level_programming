@@ -21,7 +21,8 @@ if __name__ == "__main__":
             charset="utf8")
     cur = conn.cursor()
     # execute command
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id")
+    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' COLLATE utf8_bin \
+            ORDER BY id")
     rows = cur.fetchall()
     for i in rows:
         print(i)
